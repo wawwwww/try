@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 
+use App\Entity\Devis;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
@@ -23,10 +24,29 @@ class TryController extends AbstractController
     /**
      * @Route("/", name="home")
      */
-    public function index()
+    public function index(Request $request, ObjectManager $manager)
     {
+
+        $devis = new Devis();
+        $form =$this->createFormBuilder($devis)
+            ->add('nom')
+            ->add('mail', EmailType::class)
+            ->add('ville')
+            ->add('services', TextareaType::class )
+
+
+            ->getForm();
+        $form->handleRequest($request);
+        if($form->isSubmitted() && $form->isValid()){
+            $devis->setCreatedAt(new \DateTime());
+
+            $manager->persist($devis);
+            $manager->flush();
+
+            return $this->redirectToRoute('home');
+        }
         return $this->render('try/index.html.twig', [
-            'controller_name' => 'TryController',
+            'formDevis' => $form->createView()
         ]);
     }
 
@@ -35,7 +55,7 @@ class TryController extends AbstractController
     /**
      * @Route("services", name="services")
      */
-    public function ervices()
+    public function services()
     {
         return $this->render('try/services.html.twig', [
             'controller_name' => 'TryController',

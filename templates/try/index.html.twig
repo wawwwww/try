@@ -1,9 +1,21 @@
 {% extends 'base.html.twig' %}
+{% form_theme formDevis 'bootstrap_4_layout.html.twig' %}
 
 {% block title %}page d'accueil!{% endblock %}
 
 {% block body %}
-<h3>Devis gratuit 100%</h3>
+    <div class="devis">
+        <h3>Devis 100% gratuit</h3>
+        {{ form_start(formDevis) }}
+        {{ form_row(formDevis.nom, {'attr': {'placeholder': "Dupond"}}) }}
+        {{ form_row(formDevis.mail, {'attr': {'placeholder': "dupond@gmail.com"}}) }}
+        {{ form_row(formDevis.ville, {'attr': {'placeholder': "Paris"}}) }}
+        {{ form_row(formDevis.services, {'attr': {'placeholder': "aide a la toilette, au repas ..."}}) }}
+        <button type="submit" class="btn btn-success">Envoyer</button>
+
+        {{ form_end(formDevis) }}
+    </div>
+
 
 
 {% endblock %}

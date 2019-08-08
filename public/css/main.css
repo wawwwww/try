@@ -1,13 +1,262 @@
+/* css de la page d'accueil*/
+
+/*body
+{
+    background-image: url('../help2.jpg');
+    background-size: cover;
+
+
+}*/
+.navbar
+{
+    position: fixed;
+}
+
+h1
+{
+
+    font-style: italic;
+
+
+    font-family: Algerian;
+
+   text-align: center;
+    position: fixed;
+
+}
+.devis
+{
+
+    height: 400px;
+    width: 500px;
+    background-color: white;
+    margin: 10px;
+    padding: 40px;
+}
+
 .telephone
 {
     text-align: right;
     background-position:right top;
-    padding-right: 8px;
-    color: red;
+    padding-right: 12px;
+    font-family: "Arial";
+
 
 
 }
-h1 {
+h3{
+    padding-right: 15px;
     padding-left: 15px;
+    text-align: center;
+    background-color: deepskyblue;
+    margin: 50px;
+}
+button
+{
+    margin: auto;
+    margin: 50px;
+}
+.number
+{
+
+    padding-right: 20px;
 
 }
+
+
+
+
+
+
+
+/* css de la page services*/
+
+
+
+
+
+
+
+
+
+
+/* css de la page contact*/
+
+.contact
+{
+    height: 400px;
+    width: 500px;
+    background-color: white;
+    margin: 10px;
+    padding: 40px;
+
+
+}
+
+
+
+
+
+
+
+/* css de la page candidatures*/
+
+
+
+
+
+
+
+/* css de la page commentaire*/
+
+
+
+
+
+
+
+
+/* css de la page connexion et inscription*/
+
+.connexion
+{
+    height: 400px;
+    width: 400px;
+    background-color: white;
+    margin: 10px;
+    padding: 40px;
+}
+
+.connect
+{
+    margin: 20px;
+    padding: 60px;
+}
+
+
+.inscription
+{
+    margin: 20px;
+    padding: 60px;
+}
+
+.inscrit
+{
+    height: 400px;
+    width: 400px;
+    background-color: white;
+    margin: 10px;
+    padding: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+h1 {
+
+    text-align: center;
+
+
+
+
+    margin: 12px;
+
+}
+
+
+
+
+
+
+
+
+nav
+{
+
+    margin: 25px;
+
+}
+
+li{
+    color: red;
+}
+h3
+{
+    padding: 20px;
+}
+
+
+li
+{
+
+
+    margin: auto;
+}
+
+
+
+
+
+
+
+
+body
+{
+
+}
+
+.devis
+{
+    margin: auto;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+

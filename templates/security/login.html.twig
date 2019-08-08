@@ -6,10 +6,10 @@
 {% endblock %}
 
 {% block body %}
-<h1>Connexion</h1>
-
+<h3><span class="connect">Connexion</span></h3>
+<div class="connexion">
     <form action="{{ path('security_login') }}" method="post">
-        <div class="form-group">
+        <div class="form-group" >
             <input placeholder="adress email ..." required name="_username" type="text" class="form-control">
         </div>
 
@@ -19,7 +19,10 @@
         </div>
 
         <div class="form-group">
-            <button type="submit" class="btn btn-dark">Connexion</button>
+            <button type="submit" class="btn btn-success">Connexion</button>
+            <button type="submit" class="btn btn-success" ><a href="{{ path('security_registration') }}">S'inscrire </a></button>
+
+
 
         </div>
 
@@ -27,6 +30,8 @@
 
 
     </form>
+</div>
+
 {% endblock %}
 
 

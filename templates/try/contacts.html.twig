@@ -3,11 +3,9 @@
 
 {% block title %}
 {% endblock %}
-
-
 {% block body %}
-    nous contacter
-    <div class="centrer">
+
+    <div class="contact">
     {{ form_start(formContact) }}
     {{ form_row(formContact.nom, {'attr': {'placeholder': "dupond"}}) }}
     {{ form_row(formContact.mail, {'attr': {'placeholder': "dupond@gmail.com"}}) }}

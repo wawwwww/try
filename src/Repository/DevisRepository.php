@@ -2,25 +2,25 @@
 
 namespace App\Repository;
 
-use App\Entity\User;
+use App\Entity\Devis;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
 /**
- * @method User|null find($id, $lockMode = null, $lockVersion = null)
- * @method User|null findOneBy(array $criteria, array $orderBy = null)
- * @method User[]    findAll()
- * @method User[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Devis|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Devis|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Devis[]    findAll()
+ * @method Devis[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class UserRepository extends ServiceEntityRepository
+class DevisRepository extends ServiceEntityRepository
 {
     public function __construct(RegistryInterface $registry)
     {
-        parent::__construct($registry, User::class);
+        parent::__construct($registry, Devis::class);
     }
 
     // /**
-    //  * @return User[] Returns an array of User objects
+    //  * @return Devis[] Returns an array of Devis objects
     //  */
     /*
     public function findByExampleField($value)
@@ -37,7 +37,7 @@ class UserRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findOneBySomeField($value): ?User
+    public function findOneBySomeField($value): ?Devis
     {
         return $this->createQueryBuilder('d')
             ->andWhere('d.exampleField = :val')
